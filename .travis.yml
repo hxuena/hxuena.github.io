@@ -1,0 +1,22 @@
+language: node_js
+
+node_js:
+  - "10"
+
+stages:
+  - build
+  - deploy
+
+build_commit:
+  stage: build
+  script:
+    - npm run build
+
+deploy:
+  stage: deploy
+  provider: pages
+  skip_cleanup: true
+  github_token: $GIT_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  on:
+    branch: master
