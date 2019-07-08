@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
+import Home from './components/home/home'
+import DefaultLayout from './layouts/defaultLayout'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <span>哈哈哈</span>
-      </header>
-    </div>
+    // <div className="App">
+      <DefaultLayout/>
+    // </div>
   );
 }
 
